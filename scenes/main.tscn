@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://doy5o8f5twgm3"]
+[gd_scene load_steps=28 format=3 uid="uid://doy5o8f5twgm3"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_6xjbq"]
 [ext_resource type="Texture2D" uid="uid://xuq05shy8qcg" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" id="1_nda8g"]
@@ -17,6 +17,12 @@
 [ext_resource type="Texture2D" uid="uid://cc5sshj2ywvse" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 04.png" id="14_1jspu"]
 [ext_resource type="Texture2D" uid="uid://be4b7wkb2qj0f" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 05.png" id="15_gjcru"]
 [ext_resource type="Texture2D" uid="uid://bc21icgu82l6v" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 06.png" id="16_m66i4"]
+[ext_resource type="Script" path="res://scripts/player/states/player_idle_state.gd" id="18_exf3o"]
+[ext_resource type="Script" path="res://scripts/fsm/fsm.gd" id="18_kehq5"]
+[ext_resource type="Script" path="res://scripts/player/states/player_run_state.gd" id="19_6c11y"]
+[ext_resource type="Script" path="res://scripts/player/states/player_jump_state.gd" id="20_svtmf"]
+[ext_resource type="Script" path="res://scripts/player/states/player_fall_state.gd" id="22_gehg1"]
+[ext_resource type="Script" path="res://scripts/player/input_handler.gd" id="23_thqa4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ukfm5"]
 texture = ExtResource("1_tby0s")
@@ -243,6 +249,7 @@ texture_region_size = Vector2i(32, 32)
 4:2/0 = 0
 4:2/0/terrain_set = 0
 4:2/0/terrain = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 4:2/0/terrains_peering_bit/top_side = 0
 6:3/0 = 0
 6:3/0/terrain_set = 0
@@ -396,7 +403,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_tqdvx")
 }],
-"loop": false,
+"loop": true,
 "name": &"fall",
 "speed": 10.0
 }, {
@@ -466,7 +473,7 @@ size = Vector2(14, 20)
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_v0ntd")
 format = 2
-layer_0/tile_data = PackedInt32Array(1, 65536, 4, 327681, 65536, 4, 2, 65536, 4, 3, 65536, 4, 4, 65536, 4, 5, 65536, 4, 6, 65536, 4, 7, 65536, 4, 8, 655360, 3, 65546, 131072, 1, 10, 131072, 0, 9, 65536, 0, 131082, 131072, 1, 196618, 131072, 1, 262154, 131072, 1, 327682, 65536, 4, 327683, 65536, 4, 327684, 65536, 4, 327685, 655360, 4, 327686, 65536, 2, 327687, 65536, 2, 327688, 65536, 2, 327689, 65536, 2, 327690, 131072, 2, 0, 983040, 3, 65536, 262144, 1, 131072, 262144, 1, 196608, 786432, 3, 262144, 262144, 1, 327680, 983040, 4, 196609, 65536, 4, 196610, 131072, 4, 131076, 262144, 4, 262153, 65536, 1, 196617, 65536, 1, 131081, 65536, 1, 65545, 65536, 1, 65544, 0, 1, 131080, 458752, 1, 196616, 65536, 1, 196615, 458752, 1, 131079, 0, 0, 262151, 65536, 1, 262152, 65536, 1, 262150, 458752, 1, 196614, 0, 0, 262149, 0, 0)
+layer_0/tile_data = PackedInt32Array(1, 65536, 4, 327681, 65536, 4, 2, 65536, 4, 3, 65536, 4, 4, 65536, 4, 5, 65536, 4, 6, 65536, 4, 7, 65536, 4, 8, 655360, 3, 65546, 131072, 1, 10, 131072, 0, 9, 65536, 0, 131082, 131072, 1, 196618, 131072, 1, 262154, 131072, 1, 327682, 65536, 4, 327683, 65536, 4, 327684, 65536, 4, 327685, 655360, 4, 327686, 65536, 2, 327687, 65536, 2, 327688, 65536, 2, 327689, 65536, 2, 327690, 131072, 2, 0, 983040, 3, 65536, 262144, 1, 131072, 262144, 1, 196608, 262144, 1, 262144, 262144, 1, 327680, 983040, 4, 262153, 65536, 1, 196617, 65536, 1, 131081, 65536, 1, 65545, 65536, 1, 65544, 0, 1, 131080, 458752, 1, 196616, 65536, 1, 196615, 458752, 1, 131079, 0, 0, 262151, 65536, 1, 262152, 65536, 1, 262150, 458752, 1, 196614, 0, 0, 262149, 0, 0)
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(48, 148)
@@ -476,20 +483,35 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_cemfe")
-animation = &"jump"
-frame = 2
-frame_progress = 1.0
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_7slef")
 
 [node name="FSM" type="Node" parent="Player"]
+script = ExtResource("18_kehq5")
 
 [node name="Idle" type="Node" parent="Player/FSM"]
+script = ExtResource("18_exf3o")
 
 [node name="Run" type="Node" parent="Player/FSM"]
+script = ExtResource("19_6c11y")
 
 [node name="Jump" type="Node" parent="Player/FSM"]
+script = ExtResource("20_svtmf")
 
 [node name="Fall" type="Node" parent="Player/FSM"]
+script = ExtResource("22_gehg1")
+
+[node name="CT" type="Timer" parent="Player/FSM/Fall"]
+wait_time = 0.1
+one_shot = true
+
+[node name="InputHandler" type="Node" parent="Player"]
+script = ExtResource("23_thqa4")
+
+[node name="JumpBufferTimer" type="Timer" parent="Player/InputHandler"]
+process_callback = 0
+wait_time = 0.1
+one_shot = true
