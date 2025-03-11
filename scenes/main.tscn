@@ -1,16 +1,28 @@
-[gd_scene load_steps=28 format=3 uid="uid://doy5o8f5twgm3"]
+[gd_scene load_steps=41 format=3 uid="uid://doy5o8f5twgm3"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_6xjbq"]
+[ext_resource type="Texture2D" uid="uid://dyhnv3rnmid8o" path="res://assets/Palm Tree Island/Sprites/Background/Additional Sky.png" id="1_lvkhb"]
 [ext_resource type="Texture2D" uid="uid://xuq05shy8qcg" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" id="1_nda8g"]
 [ext_resource type="Texture2D" uid="uid://cd8qfxlq7sn1v" path="res://assets/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="1_tby0s"]
 [ext_resource type="Texture2D" uid="uid://d21pek6bo5cyi" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/04-Fall/Fall 01.png" id="2_tqdvx"]
+[ext_resource type="Texture2D" uid="uid://bofhx0pim651b" path="res://assets/Palm Tree Island/Sprites/Background/BG Image.png" id="2_trbos"]
+[ext_resource type="Texture2D" uid="uid://lj5kjkwh624a" path="res://assets/Palm Tree Island/Sprites/Background/Additional Water.png" id="3_xpmxy"]
 [ext_resource type="Texture2D" uid="uid://lfxulc3gks0v" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 02.png" id="4_7jslc"]
+[ext_resource type="Texture2D" uid="uid://pba7bc07twbe" path="res://assets/Palm Tree Island/Sprites/Background/Water Reflect Big 01.png" id="4_pv1r1"]
 [ext_resource type="Texture2D" uid="uid://baqoj7nn8bndm" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 03.png" id="5_darep"]
+[ext_resource type="Texture2D" uid="uid://du3vpt2iitfho" path="res://assets/Palm Tree Island/Sprites/Background/Water Reflect Big 02.png" id="5_exlkh"]
+[ext_resource type="Texture2D" uid="uid://5clj3ueup2nv" path="res://assets/Palm Tree Island/Sprites/Background/Water Reflect Big 03.png" id="6_42wqa"]
 [ext_resource type="Texture2D" uid="uid://v3hs0ualf7v" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 04.png" id="6_h07mq"]
 [ext_resource type="Texture2D" uid="uid://t006y1la33wq" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 05.png" id="7_3iv56"]
+[ext_resource type="Texture2D" uid="uid://dw0o01lowk762" path="res://assets/Palm Tree Island/Sprites/Background/Water Reflect Big 04.png" id="7_du3g6"]
 [ext_resource type="Texture2D" uid="uid://dd5uxpsx8uftw" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 01.png" id="8_i8mv3"]
+[ext_resource type="Script" path="res://scripts/scrolling_background.gd" id="8_lhw4r"]
+[ext_resource type="Texture2D" uid="uid://duoyqxp8rrfi0" path="res://assets/Palm Tree Island/Sprites/Background/Big Clouds.png" id="8_o7heg"]
+[ext_resource type="Texture2D" uid="uid://ju25upn26v1b" path="res://assets/Palm Tree Island/Sprites/Background/Small Cloud 1.png" id="9_i0grg"]
 [ext_resource type="Texture2D" uid="uid://cuistbhyn87g5" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 02.png" id="9_ypiiw"]
+[ext_resource type="Texture2D" uid="uid://bynfq7w5ltdm5" path="res://assets/Palm Tree Island/Sprites/Background/Small Cloud 2.png" id="10_hmltj"]
 [ext_resource type="Texture2D" uid="uid://cokk1etb1m6fi" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 03.png" id="10_kwdmq"]
+[ext_resource type="Texture2D" uid="uid://b7jo86xr1s87x" path="res://assets/Palm Tree Island/Sprites/Background/Small Cloud 3.png" id="11_3uk0q"]
 [ext_resource type="Texture2D" uid="uid://bmc384p55wt8o" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 01.png" id="11_famlg"]
 [ext_resource type="Texture2D" uid="uid://o75g2ie10nf1" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 02.png" id="12_yyf62"]
 [ext_resource type="Texture2D" uid="uid://b1nrrs84p7tsg" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 03.png" id="13_elypw"]
@@ -23,6 +35,26 @@
 [ext_resource type="Script" path="res://scripts/player/states/player_jump_state.gd" id="20_svtmf"]
 [ext_resource type="Script" path="res://scripts/player/states/player_fall_state.gd" id="22_gehg1"]
 [ext_resource type="Script" path="res://scripts/player/input_handler.gd" id="23_thqa4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3t5rj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_pv1r1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_exlkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_42wqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_du3g6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ukfm5"]
 texture = ExtResource("1_tby0s")
@@ -470,10 +502,98 @@ size = Vector2(14, 20)
 
 [node name="Main" type="Node2D"]
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="BackgroundLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 1)
+
+[node name="Sky" type="Sprite2D" parent="ParallaxBackground/BackgroundLayer"]
+position = Vector2(0, -373)
+scale = Vector2(12, 12.6562)
+texture = ExtResource("1_lvkhb")
+centered = false
+
+[node name="Background" type="Sprite2D" parent="ParallaxBackground/BackgroundLayer"]
+position = Vector2(0, 32)
+texture = ExtResource("2_trbos")
+centered = false
+
+[node name="Water" type="Sprite2D" parent="ParallaxBackground/BackgroundLayer"]
+position = Vector2(0, 160)
+scale = Vector2(12, 1)
+texture = ExtResource("3_xpmxy")
+centered = false
+
+[node name="ReflectionLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/ReflectionLayer"]
+position = Vector2(29, 118)
+sprite_frames = SubResource("SpriteFrames_3t5rj")
+autoplay = "default"
+frame_progress = 0.737305
+centered = false
+
+[node name="SmallCloudsLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(320, 0)
+script = ExtResource("8_lhw4r")
+speed = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/SmallCloudsLayer"]
+position = Vector2(-1, 55)
+texture = ExtResource("9_i0grg")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/SmallCloudsLayer"]
+position = Vector2(13, -54)
+texture = ExtResource("9_i0grg")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/SmallCloudsLayer"]
+position = Vector2(58, -13)
+texture = ExtResource("10_hmltj")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/SmallCloudsLayer"]
+position = Vector2(76, 42)
+texture = ExtResource("11_3uk0q")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/SmallCloudsLayer"]
+position = Vector2(-9, -154)
+texture = ExtResource("11_3uk0q")
+centered = false
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxBackground/SmallCloudsLayer"]
+position = Vector2(167, -200)
+texture = ExtResource("10_hmltj")
+centered = false
+
+[node name="Sprite2D7" type="Sprite2D" parent="ParallaxBackground/SmallCloudsLayer"]
+position = Vector2(160, -84)
+texture = ExtResource("9_i0grg")
+centered = false
+
+[node name="Sprite2D8" type="Sprite2D" parent="ParallaxBackground/SmallCloudsLayer"]
+position = Vector2(28, -242)
+texture = ExtResource("11_3uk0q")
+centered = false
+
+[node name="BigCloudsLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(448, 0)
+script = ExtResource("8_lhw4r")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BigCloudsLayer"]
+position = Vector2(0, 17)
+texture = ExtResource("8_o7heg")
+centered = false
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_v0ntd")
 format = 2
-layer_0/tile_data = PackedInt32Array(1, 65536, 4, 327681, 65536, 4, 2, 65536, 4, 3, 65536, 4, 4, 65536, 4, 5, 65536, 4, 6, 65536, 4, 7, 65536, 4, 8, 655360, 3, 65546, 131072, 1, 10, 131072, 0, 9, 65536, 0, 131082, 131072, 1, 196618, 131072, 1, 262154, 131072, 1, 327682, 65536, 4, 327683, 65536, 4, 327684, 65536, 4, 327685, 655360, 4, 327686, 65536, 2, 327687, 65536, 2, 327688, 65536, 2, 327689, 65536, 2, 327690, 131072, 2, 0, 983040, 3, 65536, 262144, 1, 131072, 262144, 1, 196608, 262144, 1, 262144, 262144, 1, 327680, 983040, 4, 262153, 65536, 1, 196617, 65536, 1, 131081, 65536, 1, 65545, 65536, 1, 65544, 0, 1, 131080, 458752, 1, 196616, 65536, 1, 196615, 458752, 1, 131079, 0, 0, 262151, 65536, 1, 262152, 65536, 1, 262150, 458752, 1, 196614, 0, 0, 262149, 0, 0)
+layer_0/tile_data = PackedInt32Array(327681, 65536, 4, 327682, 65536, 4, 327683, 65536, 4, 327684, 65536, 4, 327685, 65536, 4, 327686, 655360, 4, 327687, 65536, 2, 327688, 65536, 2, 327689, 589824, 4, 327690, 65536, 4, 327680, 0, 4, 262153, 131072, 0, 262152, 393216, 1, 262151, 458752, 1, 262150, 0, 0, 196615, 0, 0, 196616, 131072, 0, 327691, 65536, 4, 327692, 65536, 4, 327693, 65536, 4, 327694, 65536, 4, 327695, 65536, 4, 327696, 65536, 4, 327697, 65536, 4, 131081, 262144, 4, 65546, 262144, 4, 8, 262144, 4, -65529, 262144, 4, -131066, 262144, 4, -196603, 262144, 4, -262137, 262144, 4, -327672, 262144, 4, 327698, 65536, 4, 327699, 65536, 4, 327700, 65536, 4, 327701, 65536, 4, 327702, 65536, 4, 327703, 65536, 4, 327704, 65536, 4, 327705, 65536, 4, 327706, 65536, 4, 327707, 65536, 4, 327708, 65536, 4, 327709, 65536, 4, 327710, 65536, 4, 327711, 65536, 4, 327712, 65536, 4, 327713, 131072, 4)
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(48, 148)
@@ -515,3 +635,9 @@ script = ExtResource("23_thqa4")
 process_callback = 0
 wait_time = 0.1
 one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_bottom = 180
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+editor_draw_drag_margin = true
