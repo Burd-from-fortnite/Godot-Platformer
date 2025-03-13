@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://doy5o8f5twgm3"]
+[gd_scene load_steps=42 format=3 uid="uid://doy5o8f5twgm3"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_6xjbq"]
 [ext_resource type="Texture2D" uid="uid://dyhnv3rnmid8o" path="res://assets/Palm Tree Island/Sprites/Background/Additional Sky.png" id="1_lvkhb"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://o75g2ie10nf1" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 02.png" id="12_yyf62"]
 [ext_resource type="Texture2D" uid="uid://b1nrrs84p7tsg" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 03.png" id="13_elypw"]
 [ext_resource type="Texture2D" uid="uid://cc5sshj2ywvse" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 04.png" id="14_1jspu"]
+[ext_resource type="PackedScene" uid="uid://dpqdgebpldeqb" path="res://scenes/collectables/gold_coin.tscn" id="14_jxt7f"]
 [ext_resource type="Texture2D" uid="uid://be4b7wkb2qj0f" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 05.png" id="15_gjcru"]
 [ext_resource type="Texture2D" uid="uid://bc21icgu82l6v" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 06.png" id="16_m66i4"]
 [ext_resource type="Script" path="res://scripts/player/states/player_idle_state.gd" id="18_exf3o"]
@@ -594,6 +595,23 @@ centered = false
 tile_set = SubResource("TileSet_v0ntd")
 format = 2
 layer_0/tile_data = PackedInt32Array(327681, 65536, 4, 327682, 65536, 4, 327683, 65536, 4, 327684, 65536, 4, 327685, 65536, 4, 327686, 655360, 4, 327687, 65536, 2, 327688, 65536, 2, 327689, 589824, 4, 327690, 65536, 4, 327680, 0, 4, 262153, 131072, 0, 262152, 393216, 1, 262151, 458752, 1, 262150, 0, 0, 196615, 0, 0, 196616, 131072, 0, 327691, 65536, 4, 327692, 65536, 4, 327693, 65536, 4, 327694, 65536, 4, 327695, 65536, 4, 327696, 65536, 4, 327697, 65536, 4, 131081, 262144, 4, 65546, 262144, 4, 8, 262144, 4, -65529, 262144, 4, -131066, 262144, 4, -196603, 262144, 4, -262137, 262144, 4, -327672, 262144, 4, 327698, 65536, 4, 327699, 65536, 4, 327700, 65536, 4, 327701, 65536, 4, 327702, 65536, 4, 327703, 65536, 4, 327704, 65536, 4, 327705, 65536, 4, 327706, 65536, 4, 327707, 65536, 4, 327708, 65536, 4, 327709, 65536, 4, 327710, 65536, 4, 327711, 65536, 4, 327712, 65536, 4, 327713, 131072, 4)
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="GoldCoin" parent="Coins" instance=ExtResource("14_jxt7f")]
+position = Vector2(96, 144)
+
+[node name="GoldCoin2" parent="Coins" instance=ExtResource("14_jxt7f")]
+position = Vector2(176, 144)
+
+[node name="GoldCoin3" parent="Coins" instance=ExtResource("14_jxt7f")]
+position = Vector2(208, 112)
+
+[node name="GoldCoin4" parent="Coins" instance=ExtResource("14_jxt7f")]
+position = Vector2(240, 80)
+
+[node name="GoldCoin5" parent="Coins" instance=ExtResource("14_jxt7f")]
+position = Vector2(136, 144)
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(48, 148)
