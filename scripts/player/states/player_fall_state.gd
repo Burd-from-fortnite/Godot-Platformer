@@ -1,6 +1,7 @@
 extends PlayerBaseState
 
 @onready var coyote_timer = $CT
+@onready var sfx = $LandingSFX
 
 func enter():
 	play("fall")
@@ -15,7 +16,6 @@ func physics_update(delta):
 	elif object.is_on_floor():
 		if input.jump_buffer:
 			change_state("jump")
-		if input.x == 0:
-			change_state("idle")
 		else:
-			change_state("run")
+			change_state("idle" if input.x == 0 else "run")
+			sfx.play()

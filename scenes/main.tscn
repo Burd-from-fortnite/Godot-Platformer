@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://doy5o8f5twgm3"]
+[gd_scene load_steps=61 format=3 uid="uid://doy5o8f5twgm3"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_6xjbq"]
 [ext_resource type="Texture2D" uid="uid://dyhnv3rnmid8o" path="res://assets/Palm Tree Island/Sprites/Background/Additional Sky.png" id="1_lvkhb"]
@@ -52,6 +52,9 @@
 [ext_resource type="Texture2D" uid="uid://me5v8poav5qx" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 04.png" id="43_bnbwh"]
 [ext_resource type="Texture2D" uid="uid://dfihnb1rtqa6v" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 05.png" id="44_ri04y"]
 [ext_resource type="Texture2D" uid="uid://c1toadf6dcm6d" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 06.png" id="45_4dix5"]
+[ext_resource type="AudioStream" uid="uid://diqleqn113eju" path="res://assets/Steps_1.wav" id="49_nuhqy"]
+[ext_resource type="AudioStream" uid="uid://emytp4nlnfuc" path="res://assets/Jump_3.wav" id="50_3uyod"]
+[ext_resource type="AudioStream" uid="uid://bmy2cagavuj8l" path="res://assets/Steps_2.wav" id="52_3gap2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3t5rj"]
 animations = [{
@@ -717,8 +720,19 @@ script = ExtResource("18_exf3o")
 [node name="Run" type="Node" parent="Player/FSM"]
 script = ExtResource("19_6c11y")
 
+[node name="FootstepsSFX" type="AudioStreamPlayer" parent="Player/FSM/Run"]
+stream = ExtResource("49_nuhqy")
+bus = &"SFX"
+
+[node name="FootstepsTimer" type="Timer" parent="Player/FSM/Run"]
+wait_time = 0.3
+
 [node name="Jump" type="Node" parent="Player/FSM"]
 script = ExtResource("20_svtmf")
+
+[node name="JumpSFX" type="AudioStreamPlayer" parent="Player/FSM/Jump"]
+stream = ExtResource("50_3uyod")
+bus = &"SFX"
 
 [node name="Fall" type="Node" parent="Player/FSM"]
 script = ExtResource("22_gehg1")
@@ -726,6 +740,10 @@ script = ExtResource("22_gehg1")
 [node name="CT" type="Timer" parent="Player/FSM/Fall"]
 wait_time = 0.1
 one_shot = true
+
+[node name="LandingSFX" type="AudioStreamPlayer" parent="Player/FSM/Fall"]
+stream = ExtResource("52_3gap2")
+bus = &"SFX"
 
 [node name="InputHandler" type="Node" parent="Player"]
 script = ExtResource("23_thqa4")
@@ -743,3 +761,5 @@ editor_draw_drag_margin = true
 
 [node name="Sword" parent="." instance=ExtResource("37_g4kv7")]
 position = Vector2(56, 144)
+
+[connection signal="timeout" from="Player/FSM/Run/FootstepsTimer" to="Player/FSM/Run" method="_on_footsteps_timer_timeout"]
