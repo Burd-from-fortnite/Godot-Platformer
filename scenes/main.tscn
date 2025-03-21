@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://doy5o8f5twgm3"]
+[gd_scene load_steps=64 format=3 uid="uid://doy5o8f5twgm3"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_6xjbq"]
 [ext_resource type="Texture2D" uid="uid://dyhnv3rnmid8o" path="res://assets/Palm Tree Island/Sprites/Background/Additional Sky.png" id="1_lvkhb"]
@@ -26,8 +26,11 @@
 [ext_resource type="Texture2D" uid="uid://bmc384p55wt8o" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 01.png" id="11_famlg"]
 [ext_resource type="Texture2D" uid="uid://o75g2ie10nf1" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 02.png" id="12_yyf62"]
 [ext_resource type="Texture2D" uid="uid://b1nrrs84p7tsg" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 03.png" id="13_elypw"]
+[ext_resource type="Theme" uid="uid://mfwldo813m27" path="res://scenes/themes/yellow_board_theme.tres" id="13_v65l1"]
 [ext_resource type="Texture2D" uid="uid://cc5sshj2ywvse" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 04.png" id="14_1jspu"]
+[ext_resource type="Theme" uid="uid://4a0gx6jue3rw" path="res://scenes/themes/banner_theme.tres" id="14_c31wu"]
 [ext_resource type="PackedScene" uid="uid://dpqdgebpldeqb" path="res://scenes/collectables/gold_coin.tscn" id="14_jxt7f"]
+[ext_resource type="Theme" uid="uid://d1i5vmbtkgyex" path="res://scenes/themes/paper_theme.tres" id="15_1n6k6"]
 [ext_resource type="Texture2D" uid="uid://be4b7wkb2qj0f" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 05.png" id="15_gjcru"]
 [ext_resource type="Texture2D" uid="uid://bc21icgu82l6v" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 06.png" id="16_m66i4"]
 [ext_resource type="Texture2D" uid="uid://b0aq0l5ccfaxw" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/12-Fall Sword/Fall Sword 01.png" id="17_3efxm"]
@@ -675,91 +678,232 @@ position = Vector2(0, 17)
 texture = ExtResource("8_o7heg")
 centered = false
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="MainMenu" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="PanelContainer" type="PanelContainer" parent="MainMenu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -39.0
+offset_right = 64.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("13_v65l1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = -18
+
+[node name="PanelContainer" type="PanelContainer" parent="MainMenu/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("14_c31wu")
+
+[node name="Label" type="Label" parent="MainMenu/PanelContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "treasure hunters"
+
+[node name="PanelContainer2" type="PanelContainer" parent="MainMenu/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("15_1n6k6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/PanelContainer/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label2" type="Label" parent="MainMenu/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "contine"
+justification_flags = 227
+
+[node name="Label3" type="Label" parent="MainMenu/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "new game"
+justification_flags = 227
+
+[node name="Label4" type="Label" parent="MainMenu/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "options"
+justification_flags = 227
+
+[node name="Label5" type="Label" parent="MainMenu/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "exit"
+justification_flags = 227
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.423529)
+
+[node name="PanelContainer" type="PanelContainer" parent="PauseMenu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.0
+offset_top = -60.0
+offset_right = 67.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("13_v65l1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = -18
+
+[node name="PanelContainer" type="PanelContainer" parent="PauseMenu/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("14_c31wu")
+
+[node name="Label" type="Label" parent="PauseMenu/PanelContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+text = "paused"
+
+[node name="PanelContainer2" type="PanelContainer" parent="PauseMenu/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("15_1n6k6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/PanelContainer/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="PauseMenu/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "continue"
+
+[node name="Label2" type="Label" parent="PauseMenu/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "options"
+
+[node name="Label3" type="Label" parent="PauseMenu/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "main menu"
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="World"]
 tile_set = SubResource("TileSet_v0ntd")
 format = 2
 layer_0/tile_data = PackedInt32Array(327681, 65536, 4, 327682, 65536, 4, 327683, 65536, 4, 327684, 65536, 4, 327685, 65536, 4, 327686, 655360, 4, 327687, 65536, 2, 327688, 65536, 2, 327689, 589824, 4, 327690, 65536, 4, 327680, 0, 4, 262153, 131072, 0, 262152, 393216, 1, 262151, 458752, 1, 262150, 0, 0, 196615, 0, 0, 196616, 131072, 0, 327691, 65536, 4, 327692, 65536, 4, 327693, 65536, 4, 327694, 65536, 4, 327695, 65536, 4, 327696, 65536, 4, 327697, 65536, 4, 131081, 262144, 4, 65546, 262144, 4, 8, 262144, 4, -65529, 262144, 4, -131066, 262144, 4, -196603, 262144, 4, -262137, 262144, 4, -327672, 262144, 4, 327698, 65536, 4, 327699, 65536, 4, 327700, 65536, 4, 327701, 65536, 4, 327702, 65536, 4, 327703, 65536, 4, 327704, 65536, 4, 327705, 65536, 4, 327706, 65536, 4, 327707, 65536, 4, 327708, 65536, 4, 327709, 65536, 4, 327710, 65536, 4, 327711, 65536, 4, 327712, 65536, 4, 327713, 131072, 4)
 
-[node name="Coins" type="Node2D" parent="."]
+[node name="Coins" type="Node2D" parent="World"]
 
-[node name="GoldCoin" parent="Coins" instance=ExtResource("14_jxt7f")]
+[node name="GoldCoin" parent="World/Coins" instance=ExtResource("14_jxt7f")]
 position = Vector2(96, 144)
 
-[node name="GoldCoin2" parent="Coins" instance=ExtResource("14_jxt7f")]
+[node name="GoldCoin2" parent="World/Coins" instance=ExtResource("14_jxt7f")]
 position = Vector2(176, 144)
 
-[node name="GoldCoin3" parent="Coins" instance=ExtResource("14_jxt7f")]
+[node name="GoldCoin3" parent="World/Coins" instance=ExtResource("14_jxt7f")]
 position = Vector2(208, 112)
 
-[node name="GoldCoin4" parent="Coins" instance=ExtResource("14_jxt7f")]
+[node name="GoldCoin4" parent="World/Coins" instance=ExtResource("14_jxt7f")]
 position = Vector2(240, 80)
 
-[node name="GoldCoin5" parent="Coins" instance=ExtResource("14_jxt7f")]
+[node name="GoldCoin5" parent="World/Coins" instance=ExtResource("14_jxt7f")]
 position = Vector2(136, 144)
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="World"]
 position = Vector2(11, 149)
 collision_mask = 2
 script = ExtResource("1_6xjbq")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="World/Player"]
 sprite_frames = SubResource("SpriteFrames_cemfe")
 animation = &"idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Player"]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_7slef")
 
-[node name="FSM" type="Node" parent="Player"]
+[node name="FSM" type="Node" parent="World/Player"]
 script = ExtResource("18_kehq5")
 
-[node name="Idle" type="Node" parent="Player/FSM"]
+[node name="Idle" type="Node" parent="World/Player/FSM"]
 script = ExtResource("18_exf3o")
 
-[node name="Run" type="Node" parent="Player/FSM"]
+[node name="Run" type="Node" parent="World/Player/FSM"]
 script = ExtResource("19_6c11y")
 
-[node name="FootstepsSFX" type="AudioStreamPlayer" parent="Player/FSM/Run"]
+[node name="FootstepsSFX" type="AudioStreamPlayer" parent="World/Player/FSM/Run"]
 stream = ExtResource("49_nuhqy")
 bus = &"SFX"
 
-[node name="FootstepsTimer" type="Timer" parent="Player/FSM/Run"]
+[node name="FootstepsTimer" type="Timer" parent="World/Player/FSM/Run"]
 wait_time = 0.3
 
-[node name="Jump" type="Node" parent="Player/FSM"]
+[node name="Jump" type="Node" parent="World/Player/FSM"]
 script = ExtResource("20_svtmf")
 
-[node name="JumpSFX" type="AudioStreamPlayer" parent="Player/FSM/Jump"]
+[node name="JumpSFX" type="AudioStreamPlayer" parent="World/Player/FSM/Jump"]
 stream = ExtResource("50_3uyod")
 bus = &"SFX"
 
-[node name="Fall" type="Node" parent="Player/FSM"]
+[node name="Fall" type="Node" parent="World/Player/FSM"]
 script = ExtResource("22_gehg1")
 
-[node name="CT" type="Timer" parent="Player/FSM/Fall"]
+[node name="CT" type="Timer" parent="World/Player/FSM/Fall"]
 wait_time = 0.1
 one_shot = true
 
-[node name="LandingSFX" type="AudioStreamPlayer" parent="Player/FSM/Fall"]
+[node name="LandingSFX" type="AudioStreamPlayer" parent="World/Player/FSM/Fall"]
 stream = ExtResource("52_3gap2")
 bus = &"SFX"
 
-[node name="InputHandler" type="Node" parent="Player"]
+[node name="InputHandler" type="Node" parent="World/Player"]
 script = ExtResource("23_thqa4")
 
-[node name="JumpBufferTimer" type="Timer" parent="Player/InputHandler"]
+[node name="JumpBufferTimer" type="Timer" parent="World/Player/InputHandler"]
 process_callback = 0
 wait_time = 0.1
 one_shot = true
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D" type="Camera2D" parent="World/Player"]
 limit_bottom = 180
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 editor_draw_drag_margin = true
 
-[node name="Sword" parent="." instance=ExtResource("37_g4kv7")]
+[node name="Sword" parent="World" instance=ExtResource("37_g4kv7")]
 position = Vector2(56, 144)
 
-[connection signal="timeout" from="Player/FSM/Run/FootstepsTimer" to="Player/FSM/Run" method="_on_footsteps_timer_timeout"]
+[node name="Small-text" type="Sprite2D" parent="."]
+position = Vector2(176, 176)
+
+[connection signal="timeout" from="World/Player/FSM/Run/FootstepsTimer" to="World/Player/FSM/Run" method="_on_footsteps_timer_timeout"]
