@@ -1,63 +1,25 @@
-[gd_scene load_steps=64 format=3 uid="uid://doy5o8f5twgm3"]
+[gd_scene load_steps=22 format=3 uid="uid://doy5o8f5twgm3"]
 
-[ext_resource type="Script" path="res://scripts/player/player.gd" id="1_6xjbq"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_0cidm"]
 [ext_resource type="Texture2D" uid="uid://dyhnv3rnmid8o" path="res://assets/Palm Tree Island/Sprites/Background/Additional Sky.png" id="1_lvkhb"]
-[ext_resource type="Texture2D" uid="uid://xuq05shy8qcg" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" id="1_nda8g"]
-[ext_resource type="Texture2D" uid="uid://cd8qfxlq7sn1v" path="res://assets/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="1_tby0s"]
-[ext_resource type="Texture2D" uid="uid://d21pek6bo5cyi" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/04-Fall/Fall 01.png" id="2_tqdvx"]
 [ext_resource type="Texture2D" uid="uid://bofhx0pim651b" path="res://assets/Palm Tree Island/Sprites/Background/BG Image.png" id="2_trbos"]
 [ext_resource type="Texture2D" uid="uid://lj5kjkwh624a" path="res://assets/Palm Tree Island/Sprites/Background/Additional Water.png" id="3_xpmxy"]
-[ext_resource type="Texture2D" uid="uid://lfxulc3gks0v" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 02.png" id="4_7jslc"]
 [ext_resource type="Texture2D" uid="uid://pba7bc07twbe" path="res://assets/Palm Tree Island/Sprites/Background/Water Reflect Big 01.png" id="4_pv1r1"]
-[ext_resource type="Texture2D" uid="uid://baqoj7nn8bndm" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 03.png" id="5_darep"]
 [ext_resource type="Texture2D" uid="uid://du3vpt2iitfho" path="res://assets/Palm Tree Island/Sprites/Background/Water Reflect Big 02.png" id="5_exlkh"]
 [ext_resource type="Texture2D" uid="uid://5clj3ueup2nv" path="res://assets/Palm Tree Island/Sprites/Background/Water Reflect Big 03.png" id="6_42wqa"]
-[ext_resource type="Texture2D" uid="uid://v3hs0ualf7v" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 04.png" id="6_h07mq"]
-[ext_resource type="Texture2D" uid="uid://t006y1la33wq" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 05.png" id="7_3iv56"]
 [ext_resource type="Texture2D" uid="uid://dw0o01lowk762" path="res://assets/Palm Tree Island/Sprites/Background/Water Reflect Big 04.png" id="7_du3g6"]
-[ext_resource type="Texture2D" uid="uid://dd5uxpsx8uftw" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 01.png" id="8_i8mv3"]
 [ext_resource type="Script" path="res://scripts/scrolling_background.gd" id="8_lhw4r"]
 [ext_resource type="Texture2D" uid="uid://duoyqxp8rrfi0" path="res://assets/Palm Tree Island/Sprites/Background/Big Clouds.png" id="8_o7heg"]
 [ext_resource type="Texture2D" uid="uid://ju25upn26v1b" path="res://assets/Palm Tree Island/Sprites/Background/Small Cloud 1.png" id="9_i0grg"]
-[ext_resource type="Texture2D" uid="uid://cuistbhyn87g5" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 02.png" id="9_ypiiw"]
 [ext_resource type="Texture2D" uid="uid://bynfq7w5ltdm5" path="res://assets/Palm Tree Island/Sprites/Background/Small Cloud 2.png" id="10_hmltj"]
-[ext_resource type="Texture2D" uid="uid://cokk1etb1m6fi" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 03.png" id="10_kwdmq"]
 [ext_resource type="Texture2D" uid="uid://b7jo86xr1s87x" path="res://assets/Palm Tree Island/Sprites/Background/Small Cloud 3.png" id="11_3uk0q"]
-[ext_resource type="Texture2D" uid="uid://bmc384p55wt8o" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 01.png" id="11_famlg"]
-[ext_resource type="Texture2D" uid="uid://o75g2ie10nf1" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 02.png" id="12_yyf62"]
-[ext_resource type="Texture2D" uid="uid://b1nrrs84p7tsg" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 03.png" id="13_elypw"]
+[ext_resource type="Script" path="res://scripts/UI/selection_menu.gd" id="13_gpwde"]
 [ext_resource type="Theme" uid="uid://mfwldo813m27" path="res://scenes/themes/yellow_board_theme.tres" id="13_v65l1"]
-[ext_resource type="Texture2D" uid="uid://cc5sshj2ywvse" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 04.png" id="14_1jspu"]
 [ext_resource type="Theme" uid="uid://4a0gx6jue3rw" path="res://scenes/themes/banner_theme.tres" id="14_c31wu"]
-[ext_resource type="PackedScene" uid="uid://dpqdgebpldeqb" path="res://scenes/collectables/gold_coin.tscn" id="14_jxt7f"]
 [ext_resource type="Theme" uid="uid://d1i5vmbtkgyex" path="res://scenes/themes/paper_theme.tres" id="15_1n6k6"]
-[ext_resource type="Texture2D" uid="uid://be4b7wkb2qj0f" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 05.png" id="15_gjcru"]
-[ext_resource type="Texture2D" uid="uid://bc21icgu82l6v" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 06.png" id="16_m66i4"]
-[ext_resource type="Texture2D" uid="uid://b0aq0l5ccfaxw" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/12-Fall Sword/Fall Sword 01.png" id="17_3efxm"]
-[ext_resource type="Script" path="res://scripts/player/states/player_idle_state.gd" id="18_exf3o"]
-[ext_resource type="Script" path="res://scripts/fsm/fsm.gd" id="18_kehq5"]
-[ext_resource type="Script" path="res://scripts/player/states/player_run_state.gd" id="19_6c11y"]
-[ext_resource type="Script" path="res://scripts/player/states/player_jump_state.gd" id="20_svtmf"]
-[ext_resource type="Script" path="res://scripts/player/states/player_fall_state.gd" id="22_gehg1"]
-[ext_resource type="Texture2D" uid="uid://1ql1oiif7slq" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 01.png" id="23_t3dip"]
-[ext_resource type="Script" path="res://scripts/player/input_handler.gd" id="23_thqa4"]
-[ext_resource type="Texture2D" uid="uid://chivulloq55ow" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 02.png" id="24_ox51s"]
-[ext_resource type="Texture2D" uid="uid://6l8odkcam5sq" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 03.png" id="25_ksqch"]
-[ext_resource type="Texture2D" uid="uid://dqmqchi4iywy1" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 04.png" id="26_nv60c"]
-[ext_resource type="Texture2D" uid="uid://bqatkcdoq6nwm" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 05.png" id="27_gt0wi"]
-[ext_resource type="Texture2D" uid="uid://cqjrfei2v1phn" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/11-Jump Sword/Jump Sword 01.png" id="31_ewunm"]
-[ext_resource type="Texture2D" uid="uid://bqhfa1pgrv2ax" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/11-Jump Sword/Jump Sword 02.png" id="32_br4yq"]
-[ext_resource type="Texture2D" uid="uid://cb5l3gpu2p78o" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/11-Jump Sword/Jump Sword 03.png" id="33_dw6na"]
-[ext_resource type="PackedScene" uid="uid://cqbdy2chsytvq" path="res://scenes/collectables/sword.tscn" id="37_g4kv7"]
-[ext_resource type="Texture2D" uid="uid://crb1ddral78mq" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 01.png" id="40_u6a4s"]
-[ext_resource type="Texture2D" uid="uid://3vfenyk74u7u" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 02.png" id="41_1f76r"]
-[ext_resource type="Texture2D" uid="uid://cabyoccgxfmh7" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 03.png" id="42_u5hy6"]
-[ext_resource type="Texture2D" uid="uid://me5v8poav5qx" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 04.png" id="43_bnbwh"]
-[ext_resource type="Texture2D" uid="uid://dfihnb1rtqa6v" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 05.png" id="44_ri04y"]
-[ext_resource type="Texture2D" uid="uid://c1toadf6dcm6d" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 06.png" id="45_4dix5"]
-[ext_resource type="AudioStream" uid="uid://diqleqn113eju" path="res://assets/Steps_1.wav" id="49_nuhqy"]
-[ext_resource type="AudioStream" uid="uid://emytp4nlnfuc" path="res://assets/Jump_3.wav" id="50_3uyod"]
-[ext_resource type="AudioStream" uid="uid://bmy2cagavuj8l" path="res://assets/Steps_2.wav" id="52_3gap2"]
+[ext_resource type="Script" path="res://scripts/UI/new_game_selection.gd" id="17_puvio"]
+[ext_resource type="Script" path="res://scripts/UI/exit_selection.gd" id="18_1j8f3"]
+[ext_resource type="Script" path="res://scripts/world.gd" id="20_4l2k7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3t5rj"]
 animations = [{
@@ -79,516 +41,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ukfm5"]
-texture = ExtResource("1_tby0s")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-0:0/0/terrain_set = 0
-0:0/0/terrain = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-0:0/0/terrains_peering_bit/right_side = 0
-0:0/0/terrains_peering_bit/bottom_right_corner = 0
-0:0/0/terrains_peering_bit/bottom_side = 0
-1:0/0 = 0
-1:0/0/terrain_set = 0
-1:0/0/terrain = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-1:0/0/terrains_peering_bit/right_side = 0
-1:0/0/terrains_peering_bit/bottom_right_corner = 0
-1:0/0/terrains_peering_bit/bottom_side = 0
-1:0/0/terrains_peering_bit/bottom_left_corner = 0
-1:0/0/terrains_peering_bit/left_side = 0
-2:0/0 = 0
-2:0/0/terrain_set = 0
-2:0/0/terrain = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-2:0/0/terrains_peering_bit/bottom_side = 0
-2:0/0/terrains_peering_bit/bottom_left_corner = 0
-2:0/0/terrains_peering_bit/left_side = 0
-4:0/0 = 0
-4:0/0/terrain_set = 0
-4:0/0/terrain = 0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-4:0/0/terrains_peering_bit/bottom_side = 0
-6:0/0 = 0
-6:0/0/terrain_set = 0
-6:0/0/terrain = 0
-6:0/0/terrains_peering_bit/right_side = 0
-6:0/0/terrains_peering_bit/bottom_side = 0
-6:0/0/terrains_peering_bit/bottom_left_corner = 0
-6:0/0/terrains_peering_bit/left_side = 0
-6:0/0/terrains_peering_bit/top_left_corner = 0
-6:0/0/terrains_peering_bit/top_side = 0
-6:0/0/terrains_peering_bit/top_right_corner = 0
-7:0/0 = 0
-7:0/0/terrain_set = 0
-7:0/0/terrain = 0
-7:0/0/terrains_peering_bit/right_side = 0
-7:0/0/terrains_peering_bit/bottom_right_corner = 0
-7:0/0/terrains_peering_bit/bottom_side = 0
-7:0/0/terrains_peering_bit/left_side = 0
-7:0/0/terrains_peering_bit/top_left_corner = 0
-7:0/0/terrains_peering_bit/top_side = 0
-7:0/0/terrains_peering_bit/top_right_corner = 0
-9:0/0 = 0
-9:0/0/terrain_set = 0
-9:0/0/terrain = 0
-9:0/0/terrains_peering_bit/right_side = 0
-9:0/0/terrains_peering_bit/bottom_right_corner = 0
-9:0/0/terrains_peering_bit/bottom_side = 0
-9:0/0/terrains_peering_bit/bottom_left_corner = 0
-9:0/0/terrains_peering_bit/left_side = 0
-9:0/0/terrains_peering_bit/top_side = 0
-10:0/0 = 0
-10:0/0/terrain_set = 0
-10:0/0/terrain = 0
-10:0/0/terrains_peering_bit/right_side = 0
-10:0/0/terrains_peering_bit/bottom_side = 0
-10:0/0/terrains_peering_bit/bottom_left_corner = 0
-10:0/0/terrains_peering_bit/left_side = 0
-10:0/0/terrains_peering_bit/top_left_corner = 0
-10:0/0/terrains_peering_bit/top_side = 0
-12:0/0 = 0
-12:0/0/terrain_set = 0
-12:0/0/terrain = 0
-12:0/0/terrains_peering_bit/right_side = 0
-12:0/0/terrains_peering_bit/bottom_right_corner = 0
-12:0/0/terrains_peering_bit/bottom_side = 0
-12:0/0/terrains_peering_bit/left_side = 0
-12:0/0/terrains_peering_bit/top_side = 0
-13:0/0 = 0
-13:0/0/terrain_set = 0
-13:0/0/terrain = 0
-13:0/0/terrains_peering_bit/right_side = 0
-13:0/0/terrains_peering_bit/bottom_side = 0
-13:0/0/terrains_peering_bit/bottom_left_corner = 0
-13:0/0/terrains_peering_bit/left_side = 0
-13:0/0/terrains_peering_bit/top_side = 0
-15:0/0 = 0
-15:0/0/terrain_set = 0
-15:0/0/terrain = 0
-15:0/0/terrains_peering_bit/right_side = 0
-15:0/0/terrains_peering_bit/bottom_side = 0
-15:0/0/terrains_peering_bit/left_side = 0
-15:0/0/terrains_peering_bit/top_side = 0
-0:1/0 = 0
-0:1/0/terrain_set = 0
-0:1/0/terrain = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-0:1/0/terrains_peering_bit/right_side = 0
-0:1/0/terrains_peering_bit/bottom_right_corner = 0
-0:1/0/terrains_peering_bit/bottom_side = 0
-0:1/0/terrains_peering_bit/top_side = 0
-0:1/0/terrains_peering_bit/top_right_corner = 0
-1:1/0 = 0
-1:1/0/terrain_set = 0
-1:1/0/terrain = 0
-1:1/0/terrains_peering_bit/right_side = 0
-1:1/0/terrains_peering_bit/bottom_right_corner = 0
-1:1/0/terrains_peering_bit/bottom_side = 0
-1:1/0/terrains_peering_bit/bottom_left_corner = 0
-1:1/0/terrains_peering_bit/left_side = 0
-1:1/0/terrains_peering_bit/top_left_corner = 0
-1:1/0/terrains_peering_bit/top_side = 0
-1:1/0/terrains_peering_bit/top_right_corner = 0
-2:1/0 = 0
-2:1/0/terrain_set = 0
-2:1/0/terrain = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-2:1/0/terrains_peering_bit/bottom_side = 0
-2:1/0/terrains_peering_bit/bottom_left_corner = 0
-2:1/0/terrains_peering_bit/left_side = 0
-2:1/0/terrains_peering_bit/top_left_corner = 0
-2:1/0/terrains_peering_bit/top_side = 0
-4:1/0 = 0
-4:1/0/terrain_set = 0
-4:1/0/terrain = 0
-4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-4:1/0/terrains_peering_bit/bottom_side = 0
-4:1/0/terrains_peering_bit/top_side = 0
-6:1/0 = 0
-6:1/0/terrain_set = 0
-6:1/0/terrain = 0
-6:1/0/terrains_peering_bit/right_side = 0
-6:1/0/terrains_peering_bit/bottom_right_corner = 0
-6:1/0/terrains_peering_bit/bottom_side = 0
-6:1/0/terrains_peering_bit/bottom_left_corner = 0
-6:1/0/terrains_peering_bit/left_side = 0
-6:1/0/terrains_peering_bit/top_left_corner = 0
-6:1/0/terrains_peering_bit/top_side = 0
-7:1/0 = 0
-7:1/0/terrain_set = 0
-7:1/0/terrain = 0
-7:1/0/terrains_peering_bit/right_side = 0
-7:1/0/terrains_peering_bit/bottom_right_corner = 0
-7:1/0/terrains_peering_bit/bottom_side = 0
-7:1/0/terrains_peering_bit/bottom_left_corner = 0
-7:1/0/terrains_peering_bit/left_side = 0
-7:1/0/terrains_peering_bit/top_side = 0
-7:1/0/terrains_peering_bit/top_right_corner = 0
-9:1/0 = 0
-9:1/0/terrain_set = 0
-9:1/0/terrain = 0
-9:1/0/terrains_peering_bit/right_side = 0
-9:1/0/terrains_peering_bit/bottom_right_corner = 0
-9:1/0/terrains_peering_bit/bottom_side = 0
-9:1/0/terrains_peering_bit/left_side = 0
-9:1/0/terrains_peering_bit/top_side = 0
-9:1/0/terrains_peering_bit/top_right_corner = 0
-10:1/0 = 0
-10:1/0/terrain_set = 0
-10:1/0/terrain = 0
-10:1/0/terrains_peering_bit/right_side = 0
-10:1/0/terrains_peering_bit/bottom_side = 0
-10:1/0/terrains_peering_bit/left_side = 0
-10:1/0/terrains_peering_bit/top_left_corner = 0
-10:1/0/terrains_peering_bit/top_side = 0
-10:1/0/terrains_peering_bit/top_right_corner = 0
-12:1/0 = 0
-12:1/0/terrain_set = 0
-12:1/0/terrain = 0
-12:1/0/terrains_peering_bit/right_side = 0
-12:1/0/terrains_peering_bit/bottom_side = 0
-12:1/0/terrains_peering_bit/left_side = 0
-12:1/0/terrains_peering_bit/top_side = 0
-12:1/0/terrains_peering_bit/top_right_corner = 0
-13:1/0 = 0
-13:1/0/terrain_set = 0
-13:1/0/terrain = 0
-13:1/0/terrains_peering_bit/right_side = 0
-13:1/0/terrains_peering_bit/bottom_side = 0
-13:1/0/terrains_peering_bit/left_side = 0
-13:1/0/terrains_peering_bit/top_left_corner = 0
-13:1/0/terrains_peering_bit/top_side = 0
-15:1/0 = 0
-15:1/0/terrain_set = 0
-15:1/0/terrain = 0
-15:1/0/terrains_peering_bit/right_side = 0
-15:1/0/terrains_peering_bit/bottom_side = 0
-15:1/0/terrains_peering_bit/bottom_left_corner = 0
-15:1/0/terrains_peering_bit/left_side = 0
-15:1/0/terrains_peering_bit/top_side = 0
-15:1/0/terrains_peering_bit/top_right_corner = 0
-16:1/0 = 0
-16:1/0/terrain_set = 0
-16:1/0/terrain = 0
-16:1/0/terrains_peering_bit/right_side = 0
-16:1/0/terrains_peering_bit/bottom_right_corner = 0
-16:1/0/terrains_peering_bit/bottom_side = 0
-16:1/0/terrains_peering_bit/left_side = 0
-16:1/0/terrains_peering_bit/top_left_corner = 0
-16:1/0/terrains_peering_bit/top_side = 0
-0:2/0 = 0
-0:2/0/terrain_set = 0
-0:2/0/terrain = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-0:2/0/terrains_peering_bit/right_side = 0
-0:2/0/terrains_peering_bit/top_side = 0
-0:2/0/terrains_peering_bit/top_right_corner = 0
-1:2/0 = 0
-1:2/0/terrain_set = 0
-1:2/0/terrain = 0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-1:2/0/terrains_peering_bit/right_side = 0
-1:2/0/terrains_peering_bit/left_side = 0
-1:2/0/terrains_peering_bit/top_left_corner = 0
-1:2/0/terrains_peering_bit/top_side = 0
-1:2/0/terrains_peering_bit/top_right_corner = 0
-2:2/0 = 0
-2:2/0/terrain_set = 0
-2:2/0/terrain = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-2:2/0/terrains_peering_bit/left_side = 0
-2:2/0/terrains_peering_bit/top_left_corner = 0
-2:2/0/terrains_peering_bit/top_side = 0
-4:2/0 = 0
-4:2/0/terrain_set = 0
-4:2/0/terrain = 0
-4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-4:2/0/terrains_peering_bit/top_side = 0
-6:3/0 = 0
-6:3/0/terrain_set = 0
-6:3/0/terrain = 0
-6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-6:3/0/terrains_peering_bit/right_side = 0
-6:3/0/terrains_peering_bit/bottom_side = 0
-6:3/0/terrains_peering_bit/top_side = 0
-6:3/0/terrains_peering_bit/top_right_corner = 0
-7:3/0 = 0
-7:3/0/terrain_set = 0
-7:3/0/terrain = 0
-7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-7:3/0/terrains_peering_bit/bottom_side = 0
-7:3/0/terrains_peering_bit/left_side = 0
-7:3/0/terrains_peering_bit/top_left_corner = 0
-7:3/0/terrains_peering_bit/top_side = 0
-9:3/0 = 0
-9:3/0/terrain_set = 0
-9:3/0/terrain = 0
-9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-9:3/0/terrains_peering_bit/right_side = 0
-9:3/0/terrains_peering_bit/bottom_side = 0
-9:3/0/terrains_peering_bit/bottom_left_corner = 0
-9:3/0/terrains_peering_bit/left_side = 0
-10:3/0 = 0
-10:3/0/terrain_set = 0
-10:3/0/terrain = 0
-10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-10:3/0/terrains_peering_bit/right_side = 0
-10:3/0/terrains_peering_bit/bottom_right_corner = 0
-10:3/0/terrains_peering_bit/bottom_side = 0
-10:3/0/terrains_peering_bit/left_side = 0
-12:3/0 = 0
-12:3/0/terrain_set = 0
-12:3/0/terrain = 0
-12:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-12:3/0/terrains_peering_bit/right_side = 0
-12:3/0/terrains_peering_bit/bottom_side = 0
-12:3/0/terrains_peering_bit/top_side = 0
-13:3/0 = 0
-13:3/0/terrain_set = 0
-13:3/0/terrain = 0
-13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-13:3/0/terrains_peering_bit/right_side = 0
-13:3/0/terrains_peering_bit/bottom_side = 0
-13:3/0/terrains_peering_bit/left_side = 0
-15:3/0 = 0
-15:3/0/terrain_set = 0
-15:3/0/terrain = 0
-15:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-15:3/0/terrains_peering_bit/right_side = 0
-15:3/0/terrains_peering_bit/bottom_side = 0
-16:3/0 = 0
-16:3/0/terrain_set = 0
-16:3/0/terrain = 0
-16:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-16:3/0/terrains_peering_bit/bottom_side = 0
-16:3/0/terrains_peering_bit/left_side = 0
-0:4/0 = 0
-0:4/0/terrain_set = 0
-0:4/0/terrain = 0
-0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-0:4/0/terrains_peering_bit/right_side = 0
-1:4/0 = 0
-1:4/0/terrain_set = 0
-1:4/0/terrain = 0
-1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-1:4/0/terrains_peering_bit/right_side = 0
-1:4/0/terrains_peering_bit/left_side = 0
-2:4/0 = 0
-2:4/0/terrain_set = 0
-2:4/0/terrain = 0
-2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-2:4/0/terrains_peering_bit/left_side = 0
-4:4/0 = 0
-4:4/0/terrain_set = 0
-4:4/0/terrain = 0
-4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-6:4/0 = 0
-6:4/0/terrain_set = 0
-6:4/0/terrain = 0
-6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-6:4/0/terrains_peering_bit/right_side = 0
-6:4/0/terrains_peering_bit/bottom_right_corner = 0
-6:4/0/terrains_peering_bit/bottom_side = 0
-6:4/0/terrains_peering_bit/top_side = 0
-7:4/0 = 0
-7:4/0/terrain_set = 0
-7:4/0/terrain = 0
-7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-7:4/0/terrains_peering_bit/bottom_side = 0
-7:4/0/terrains_peering_bit/bottom_left_corner = 0
-7:4/0/terrains_peering_bit/left_side = 0
-7:4/0/terrains_peering_bit/top_side = 0
-9:4/0 = 0
-9:4/0/terrain_set = 0
-9:4/0/terrain = 0
-9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-9:4/0/terrains_peering_bit/right_side = 0
-9:4/0/terrains_peering_bit/left_side = 0
-9:4/0/terrains_peering_bit/top_left_corner = 0
-9:4/0/terrains_peering_bit/top_side = 0
-10:4/0 = 0
-10:4/0/terrain_set = 0
-10:4/0/terrain = 0
-10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-10:4/0/terrains_peering_bit/right_side = 0
-10:4/0/terrains_peering_bit/left_side = 0
-10:4/0/terrains_peering_bit/top_side = 0
-10:4/0/terrains_peering_bit/top_right_corner = 0
-12:4/0 = 0
-12:4/0/terrain_set = 0
-12:4/0/terrain = 0
-12:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-12:4/0/terrains_peering_bit/right_side = 0
-12:4/0/terrains_peering_bit/left_side = 0
-12:4/0/terrains_peering_bit/top_side = 0
-13:4/0 = 0
-13:4/0/terrain_set = 0
-13:4/0/terrain = 0
-13:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-13:4/0/terrains_peering_bit/bottom_side = 0
-13:4/0/terrains_peering_bit/left_side = 0
-13:4/0/terrains_peering_bit/top_side = 0
-15:4/0 = 0
-15:4/0/terrain_set = 0
-15:4/0/terrain = 0
-15:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-15:4/0/terrains_peering_bit/right_side = 0
-15:4/0/terrains_peering_bit/top_side = 0
-16:4/0 = 0
-16:4/0/terrain_set = 0
-16:4/0/terrain = 0
-16:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-16:4/0/terrains_peering_bit/left_side = 0
-16:4/0/terrains_peering_bit/top_side = 0
-
-[sub_resource type="TileSet" id="TileSet_v0ntd"]
-tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 2
-physics_layer_0/collision_mask = 0
-terrain_set_0/mode = 0
-terrain_set_0/terrain_0/name = "Palm Tree Island Ground"
-terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
-sources/0 = SubResource("TileSetAtlasSource_ukfm5")
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_cemfe"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_tqdvx")
-}],
-"loop": true,
-"name": &"fall",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("17_3efxm")
-}],
-"loop": true,
-"name": &"fall_sword",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_nda8g")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_7jslc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_darep")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_h07mq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_3iv56")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("23_t3dip")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_ox51s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_ksqch")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_nv60c")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_gt0wi")
-}],
-"loop": true,
-"name": &"idle_sword",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_i8mv3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_ypiiw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_kwdmq")
-}],
-"loop": false,
-"name": &"jump",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("31_ewunm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_br4yq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_dw6na")
-}],
-"loop": false,
-"name": &"jump_sword",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_famlg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_yyf62")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_elypw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_1jspu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_gjcru")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_m66i4")
-}],
-"loop": true,
-"name": &"run",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("40_u6a4s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("41_1f76r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("42_u5hy6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("43_bnbwh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("44_ri04y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("45_4dix5")
-}],
-"loop": true,
-"name": &"run_sword",
-"speed": 10.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7slef"]
-size = Vector2(14, 20)
-
 [node name="Main" type="Node2D"]
+script = ExtResource("1_0cidm")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -678,10 +132,11 @@ position = Vector2(0, 17)
 texture = ExtResource("8_o7heg")
 centered = false
 
-[node name="MainMenu" type="CanvasLayer" parent="."]
-visible = false
+[node name="MainMenu" type="CanvasLayer" parent="." node_paths=PackedStringArray("selection_container")]
+script = ExtResource("13_gpwde")
+selection_container = NodePath("MainMenuPanel/MainMenuContainer/SelectionPanel/SelectionContainer")
 
-[node name="PanelContainer" type="PanelContainer" parent="MainMenu"]
+[node name="MainMenuPanel" type="PanelContainer" parent="MainMenu"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -695,55 +150,57 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("13_v65l1")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/PanelContainer"]
+[node name="MainMenuContainer" type="VBoxContainer" parent="MainMenu/MainMenuPanel"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = -18
 
-[node name="PanelContainer" type="PanelContainer" parent="MainMenu/PanelContainer/VBoxContainer"]
+[node name="TitlePanel" type="PanelContainer" parent="MainMenu/MainMenuPanel/MainMenuContainer"]
 layout_mode = 2
 theme = ExtResource("14_c31wu")
 
-[node name="Label" type="Label" parent="MainMenu/PanelContainer/VBoxContainer/PanelContainer"]
+[node name="TitleLabel" type="Label" parent="MainMenu/MainMenuPanel/MainMenuContainer/TitlePanel"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "treasure hunters"
 
-[node name="PanelContainer2" type="PanelContainer" parent="MainMenu/PanelContainer/VBoxContainer"]
+[node name="SelectionPanel" type="PanelContainer" parent="MainMenu/MainMenuPanel/MainMenuContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("15_1n6k6")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/PanelContainer/VBoxContainer/PanelContainer2"]
+[node name="SelectionContainer" type="VBoxContainer" parent="MainMenu/MainMenuPanel/MainMenuContainer/SelectionPanel"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Label2" type="Label" parent="MainMenu/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="ContinueLabel" type="Label" parent="MainMenu/MainMenuPanel/MainMenuContainer/SelectionPanel/SelectionContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "contine"
+text = "continue"
 justification_flags = 227
 
-[node name="Label3" type="Label" parent="MainMenu/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="NewGameLabel" type="Label" parent="MainMenu/MainMenuPanel/MainMenuContainer/SelectionPanel/SelectionContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "new game"
 justification_flags = 227
+script = ExtResource("17_puvio")
 
-[node name="Label4" type="Label" parent="MainMenu/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="OptionsLabel" type="Label" parent="MainMenu/MainMenuPanel/MainMenuContainer/SelectionPanel/SelectionContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "options"
 justification_flags = 227
 
-[node name="Label5" type="Label" parent="MainMenu/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="ExitLabel" type="Label" parent="MainMenu/MainMenuPanel/MainMenuContainer/SelectionPanel/SelectionContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "exit"
 justification_flags = 227
+script = ExtResource("18_1j8f3")
 
 [node name="PauseMenu" type="CanvasLayer" parent="."]
 visible = false
@@ -815,95 +272,4 @@ size_flags_horizontal = 4
 text = "main menu"
 
 [node name="World" type="Node2D" parent="."]
-
-[node name="TileMap" type="TileMap" parent="World"]
-tile_set = SubResource("TileSet_v0ntd")
-format = 2
-layer_0/tile_data = PackedInt32Array(327681, 65536, 4, 327682, 65536, 4, 327683, 65536, 4, 327684, 65536, 4, 327685, 65536, 4, 327686, 655360, 4, 327687, 65536, 2, 327688, 65536, 2, 327689, 589824, 4, 327690, 65536, 4, 327680, 0, 4, 262153, 131072, 0, 262152, 393216, 1, 262151, 458752, 1, 262150, 0, 0, 196615, 0, 0, 196616, 131072, 0, 327691, 65536, 4, 327692, 65536, 4, 327693, 65536, 4, 327694, 65536, 4, 327695, 65536, 4, 327696, 65536, 4, 327697, 65536, 4, 131081, 262144, 4, 65546, 262144, 4, 8, 262144, 4, -65529, 262144, 4, -131066, 262144, 4, -196603, 262144, 4, -262137, 262144, 4, -327672, 262144, 4, 327698, 65536, 4, 327699, 65536, 4, 327700, 65536, 4, 327701, 65536, 4, 327702, 65536, 4, 327703, 65536, 4, 327704, 65536, 4, 327705, 65536, 4, 327706, 65536, 4, 327707, 65536, 4, 327708, 65536, 4, 327709, 65536, 4, 327710, 65536, 4, 327711, 65536, 4, 327712, 65536, 4, 327713, 131072, 4)
-
-[node name="Coins" type="Node2D" parent="World"]
-
-[node name="GoldCoin" parent="World/Coins" instance=ExtResource("14_jxt7f")]
-position = Vector2(96, 144)
-
-[node name="GoldCoin2" parent="World/Coins" instance=ExtResource("14_jxt7f")]
-position = Vector2(176, 144)
-
-[node name="GoldCoin3" parent="World/Coins" instance=ExtResource("14_jxt7f")]
-position = Vector2(208, 112)
-
-[node name="GoldCoin4" parent="World/Coins" instance=ExtResource("14_jxt7f")]
-position = Vector2(240, 80)
-
-[node name="GoldCoin5" parent="World/Coins" instance=ExtResource("14_jxt7f")]
-position = Vector2(136, 144)
-
-[node name="Player" type="CharacterBody2D" parent="World"]
-position = Vector2(11, 149)
-collision_mask = 2
-script = ExtResource("1_6xjbq")
-metadata/_edit_group_ = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="World/Player"]
-sprite_frames = SubResource("SpriteFrames_cemfe")
-animation = &"idle"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Player"]
-position = Vector2(0, 2)
-shape = SubResource("RectangleShape2D_7slef")
-
-[node name="FSM" type="Node" parent="World/Player"]
-script = ExtResource("18_kehq5")
-
-[node name="Idle" type="Node" parent="World/Player/FSM"]
-script = ExtResource("18_exf3o")
-
-[node name="Run" type="Node" parent="World/Player/FSM"]
-script = ExtResource("19_6c11y")
-
-[node name="FootstepsSFX" type="AudioStreamPlayer" parent="World/Player/FSM/Run"]
-stream = ExtResource("49_nuhqy")
-bus = &"SFX"
-
-[node name="FootstepsTimer" type="Timer" parent="World/Player/FSM/Run"]
-wait_time = 0.3
-
-[node name="Jump" type="Node" parent="World/Player/FSM"]
-script = ExtResource("20_svtmf")
-
-[node name="JumpSFX" type="AudioStreamPlayer" parent="World/Player/FSM/Jump"]
-stream = ExtResource("50_3uyod")
-bus = &"SFX"
-
-[node name="Fall" type="Node" parent="World/Player/FSM"]
-script = ExtResource("22_gehg1")
-
-[node name="CT" type="Timer" parent="World/Player/FSM/Fall"]
-wait_time = 0.1
-one_shot = true
-
-[node name="LandingSFX" type="AudioStreamPlayer" parent="World/Player/FSM/Fall"]
-stream = ExtResource("52_3gap2")
-bus = &"SFX"
-
-[node name="InputHandler" type="Node" parent="World/Player"]
-script = ExtResource("23_thqa4")
-
-[node name="JumpBufferTimer" type="Timer" parent="World/Player/InputHandler"]
-process_callback = 0
-wait_time = 0.1
-one_shot = true
-
-[node name="Camera2D" type="Camera2D" parent="World/Player"]
-limit_bottom = 180
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-editor_draw_drag_margin = true
-
-[node name="Sword" parent="World" instance=ExtResource("37_g4kv7")]
-position = Vector2(56, 144)
-
-[node name="Small-text" type="Sprite2D" parent="."]
-position = Vector2(176, 176)
-
-[connection signal="timeout" from="World/Player/FSM/Run/FootstepsTimer" to="World/Player/FSM/Run" method="_on_footsteps_timer_timeout"]
+script = ExtResource("20_4l2k7")
