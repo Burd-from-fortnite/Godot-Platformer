@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://doy5o8f5twgm3"]
+[gd_scene load_steps=29 format=3 uid="uid://doy5o8f5twgm3"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_0cidm"]
 [ext_resource type="Texture2D" uid="uid://dyhnv3rnmid8o" path="res://assets/Palm Tree Island/Sprites/Background/Additional Sky.png" id="1_lvkhb"]
@@ -20,6 +20,9 @@
 [ext_resource type="Script" path="res://scripts/UI/new_game_selection.gd" id="17_puvio"]
 [ext_resource type="Script" path="res://scripts/UI/exit_selection.gd" id="18_1j8f3"]
 [ext_resource type="Script" path="res://scripts/world.gd" id="20_4l2k7"]
+[ext_resource type="Script" path="res://scripts/UI/continue_selection.gd" id="20_pj8p8"]
+[ext_resource type="Script" path="res://scripts/UI/transition.gd" id="20_rx5d4"]
+[ext_resource type="Script" path="res://scripts/UI/main_menu_selection.gd" id="21_2ualh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3t5rj"]
 animations = [{
@@ -40,6 +43,96 @@ animations = [{
 "name": &"default",
 "speed": 10.0
 }]
+
+[sub_resource type="Animation" id="Animation_eo61h"]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_tvkr2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_7750w"]
+resource_name = "fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n6smr"]
+_data = {
+"RESET": SubResource("Animation_tvkr2"),
+"fade_in": SubResource("Animation_eo61h"),
+"fade_out": SubResource("Animation_7750w")
+}
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0cidm")
@@ -133,6 +226,8 @@ texture = ExtResource("8_o7heg")
 centered = false
 
 [node name="MainMenu" type="CanvasLayer" parent="." node_paths=PackedStringArray("selection_container")]
+process_mode = 3
+visible = false
 script = ExtResource("13_gpwde")
 selection_container = NodePath("MainMenuPanel/MainMenuContainer/SelectionPanel/SelectionContainer")
 
@@ -202,8 +297,11 @@ text = "exit"
 justification_flags = 227
 script = ExtResource("18_1j8f3")
 
-[node name="PauseMenu" type="CanvasLayer" parent="."]
+[node name="PauseMenu" type="CanvasLayer" parent="." node_paths=PackedStringArray("selection_container")]
+process_mode = 3
 visible = false
+script = ExtResource("13_gpwde")
+selection_container = NodePath("PauseMenuPanel/PauseMenuContainer/SelectionPanel/SelectionContainer")
 
 [node name="ColorRect" type="ColorRect" parent="PauseMenu"]
 anchors_preset = 15
@@ -213,7 +311,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.423529)
 
-[node name="PanelContainer" type="PanelContainer" parent="PauseMenu"]
+[node name="PauseMenuPanel" type="PanelContainer" parent="PauseMenu"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -229,47 +327,65 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("13_v65l1")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/PanelContainer"]
+[node name="PauseMenuContainer" type="VBoxContainer" parent="PauseMenu/PauseMenuPanel"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = -18
 
-[node name="PanelContainer" type="PanelContainer" parent="PauseMenu/PanelContainer/VBoxContainer"]
+[node name="TitlePanel" type="PanelContainer" parent="PauseMenu/PauseMenuPanel/PauseMenuContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("14_c31wu")
 
-[node name="Label" type="Label" parent="PauseMenu/PanelContainer/VBoxContainer/PanelContainer"]
+[node name="TitleLabel" type="Label" parent="PauseMenu/PauseMenuPanel/PauseMenuContainer/TitlePanel"]
 layout_mode = 2
 text = "paused"
 
-[node name="PanelContainer2" type="PanelContainer" parent="PauseMenu/PanelContainer/VBoxContainer"]
+[node name="SelectionPanel" type="PanelContainer" parent="PauseMenu/PauseMenuPanel/PauseMenuContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("15_1n6k6")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/PanelContainer/VBoxContainer/PanelContainer2"]
+[node name="SelectionContainer" type="VBoxContainer" parent="PauseMenu/PauseMenuPanel/PauseMenuContainer/SelectionPanel"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="PauseMenu/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="ContinueLabel" type="Label" parent="PauseMenu/PauseMenuPanel/PauseMenuContainer/SelectionPanel/SelectionContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "continue"
+script = ExtResource("20_pj8p8")
 
-[node name="Label2" type="Label" parent="PauseMenu/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="OptionsLabel" type="Label" parent="PauseMenu/PauseMenuPanel/PauseMenuContainer/SelectionPanel/SelectionContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "options"
 
-[node name="Label3" type="Label" parent="PauseMenu/PanelContainer/VBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="MainMenuLabel" type="Label" parent="PauseMenu/PauseMenuPanel/PauseMenuContainer/SelectionPanel/SelectionContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "main menu"
+script = ExtResource("21_2ualh")
+
+[node name="Transition" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("20_rx5d4")
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transition"]
+libraries = {
+"": SubResource("AnimationLibrary_n6smr")
+}
 
 [node name="World" type="Node2D" parent="."]
 script = ExtResource("20_4l2k7")
+
+[connection signal="animation_finished" from="Transition/AnimationPlayer" to="Transition" method="_on_animation_player_animation_finished"]
